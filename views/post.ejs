@@ -1,0 +1,13 @@
+<%- include("partial/header") -%>
+
+<form action="/home/<%=pt%>" method="post">
+    <%= console.log(pt) %>
+    <h1> <%= pt %> </h1>
+    <p > <%= pc %> </p>
+    <button  class="btn btn-primary" type="submit">Delete Post</button>
+
+</form>
+
+<%- include("partial/footer") -%>
+
+<% console.log("Post page") %>

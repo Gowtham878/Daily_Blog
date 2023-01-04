@@ -1,0 +1,23 @@
+<%- include("partial/header") -%>
+<h1> Home </h1>
+
+<p > <%= hc %></p>    
+
+<%
+for (let key in postlist) {
+    if (postlist.hasOwnProperty(key)) {
+    value = postlist[key];
+    tittle = value.Tittle
+    capitalized_tittle = tittle.charAt(0).toUpperCase()+ tittle.slice(1)    
+    }
+%>
+    <div>
+        <h1> <%= capitalized_tittle %> </h1>
+        <p> <%= value.Content.substring(0,100) + " ..." %> <a href ='/home/posts/<%=value.Tittle %>'> Read more</a></p>
+    </div>
+<%}%>    
+
+
+<%- include("partial/footer") -%>
+
+<% console.log("Home") %>
