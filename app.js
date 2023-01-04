@@ -10,7 +10,7 @@ const e = require("express");
 const Posts = require('./user_model')
 require('dotenv').config()
 ////////////////////////////////////////////////////////////////////////////////
-const url = 'mongodb+srv://gotham:'+encodeURIComponent('G0thamXmongo')+'@journal.4ok3oge.mongodb.net/journal?retryWrites=true&w=majority'
+const url = process.env.url
 mongoose.set('strictQuery', false)
 try{mongoose.connect(url,{useNewUrlParser : true})}
 catch(err){console.log(err)}
